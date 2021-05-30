@@ -3,16 +3,16 @@
     <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #email>
           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="exampleInputPassword1" #password>
         </div>
 
         <div style="display: flex;justify-content: center;">
-            <button type="submit"  class="btn btn-primary">login</button>
+            <button type="button" (click)="Login(email.value,password.value)" class="btn btn-primary">login</button>
             <a routerLink="register" ><button style="margin-left: 10px;" type="button" class="btn btn-success">Signup</button></a>
             
         </div>
